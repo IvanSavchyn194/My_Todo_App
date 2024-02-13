@@ -11,8 +11,8 @@ def add_todo():
     print(todo)
 
 
-st.title("My ToDo App")
-st.subheader("This is my todo app.")
+st.title("ToDo WebApp")
+st.subheader("This is todo app.")
 st.write("This app is to increase your productivity.")
 
 for index, todo in enumerate(todos):
@@ -21,7 +21,7 @@ for index, todo in enumerate(todos):
         todos.pop(index)
         functions.write_todos(todos)
         del st.session_state[todo]
-        st.experimental_rerun()
+        st.rerun()
 
 st.text_input(label="New todo",
               placeholder="Add new todo...",
